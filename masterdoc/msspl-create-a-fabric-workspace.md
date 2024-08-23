@@ -4,7 +4,7 @@ In this exercise, you build a lakehouse, ingest sample data into the delta table
 
 #### Task 1.1: Assign Fabric Administrator Role
 
-1. Start by searching for **Azure Active Directory** in the search pane in Azure portal:
+1. Start by searching for **Microsoft Entra ID** in the search pane in Azure portal:
 
    ![Navigate-To-AAD](https://github.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/blob/dev/media/08/01.png?raw=true)
 
