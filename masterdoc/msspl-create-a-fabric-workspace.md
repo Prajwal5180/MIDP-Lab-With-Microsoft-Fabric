@@ -4,7 +4,7 @@ In this exercise, you build a lakehouse, ingest sample data into the delta table
 
 #### Task 1.1: Assign Fabric Administrator Role
 
-1. Start by searching for **Azure Active Directory** in the search pane in Azure portal:
+1. Start by searching for **Microsoft Entra ID** in the search pane in Azure portal:
 
    ![Navigate-To-AAD](https://github.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/blob/dev/media/08/01.png?raw=true)
 
@@ -38,7 +38,7 @@ In this exercise, you build a lakehouse, ingest sample data into the delta table
    https://powerbi.com
    ```
 
-2. Select **Account manager(1)**, and click on **Start trial(2)**:
+2. Select **Account manager(1)**, and click on **Free trial(2)**:
 
    ![Account-manager-start](https://github.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/blob/dev/media/08/07.png?raw=true)
 
@@ -46,9 +46,9 @@ In this exercise, you build a lakehouse, ingest sample data into the delta table
 
    ![Start-trial](https://github.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/blob/dev/media/08/08.png?raw=true)
 
-4. Once your trial capacity is ready, you receive a confirmation message. Select **Got it(1)** to begin working in Fabric:
+4. Once your trial capacity is ready, you receive a confirmation message **Successfully upgraded to a free Microsoft Fabric trail**. Select **Stay on a current page** to begin working in Fabric:
 
-   ![Got-it](https://github.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/blob/dev/media/08/09.png?raw=true)
+   ![Got-it](https://github.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/blob/dev/media/08/09t.png?raw=true)
 
 6. Now, open **Account manager(1)** again, and verify **Trial status(2)**.
 
