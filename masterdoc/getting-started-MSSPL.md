@@ -1,4 +1,4 @@
-# Analytics in the Microsoft Intelligent Data Platform Lab
+# Get data into Fabric Lakehouse
 
 ## Overall Estimated Duration: 8 Hours
 
