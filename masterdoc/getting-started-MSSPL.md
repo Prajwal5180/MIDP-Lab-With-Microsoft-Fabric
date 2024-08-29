@@ -4,11 +4,7 @@
 
 ## Overview
 
-Traditionally, organizations have been building modern data warehouses for their transactional and structured data analytics needs. And data lakehouses for big data (semi/unstructured) data analytics needs. These two systems ran in parallel, creating silos, data duplication, and increased total cost of ownership.
-
-Microsoft Fabric is an all-in-one analytics solution for enterprises that covers everything from data movement to data science, real-time analytics, and business intelligence. It offers a comprehensive suite of services, including data lake, data engineering, and data integration, all in one place. Fabric with its unification of data store and standardization on Delta Lake format allows you to eliminate silos, remove data duplication, and drastically reduce the total cost of ownership.
-
-With the flexibility offered by Fabric, you can implement either lakehouse or data warehouse architectures or combine them together to get the best of both with simple implementation. In this tutorial, you're going to take an example of a retail organization and build its lakehouse from start to finish. It uses the medallion architecture where the bronze layer has the raw data, the silver layer has the validated and deduplicated data, and the gold layer has highly refined data. You can take the same approach to implement a lakehouse for any organization from any industry.
+Traditionally, organizations used separate systems for structured data warehouses and unstructured data lakehouses, leading to silos and higher costs. Microsoft Fabric integrates these functions into a single platform, offering data movement, real-time analytics, and business intelligence with Delta Lake standardization to eliminate silos and reduce costs. It supports flexible implementations of lakehouse or data warehouse architectures. This tutorial demonstrates building a retail organization's lakehouse using a medallion architecture with raw, validated, and refined data layers, applicable across industries.
 
 ## Objective
 
