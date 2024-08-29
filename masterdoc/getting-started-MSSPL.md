@@ -8,7 +8,7 @@ Traditionally, organizations used separate systems for structured data warehouse
 
 ## Objective
 
-### Lakehouse end-to-end scenario
+Understand how to set up a Fabric workspace, build a lakehouse, ingest and transform data, and create reports. By the end of this lab, you will be able to:
 
 - **Create a Fabric workspace** : Learn to create and set up a Fabric workspace, including understanding prerequisites and executing the workspace creation process.
 - **Build a lakehouse** : Learn to build a lakehouse by activating SharePoint Online, creating the lakehouse, ingesting sample data, and building a report.
@@ -139,7 +139,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
     ![Start Your Azure Journey](../media/01/num.png?raw=true)
 
-In this hands-on lab, you'll lear to set up a Fabric workspace, build a lakehouse, ingest and transform data, and create reports. The lab covers workspace creation, data integration, preparation techniques, and report development using Microsoft Fabric.
+In this hands-on lab, you'll learn to set up a Fabric workspace, build a lakehouse, ingest and transform data, and create reports. The lab covers workspace creation, data integration, preparation techniques, and report development using Microsoft Fabric.
 
 ### Known Issues
 
