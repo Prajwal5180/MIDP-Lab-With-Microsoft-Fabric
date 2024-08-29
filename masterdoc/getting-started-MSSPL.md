@@ -10,15 +10,15 @@ Traditionally, organizations used separate systems for structured data warehouse
 
 Understand how to set up a Fabric workspace, build a lakehouse, ingest and transform data, and create reports. By the end of this lab, you will be able to:
 
-- **Create a Fabric workspace** : Learn to create and set up a Fabric workspace, including understanding prerequisites and executing the workspace creation process.
-- **Build a lakehouse** : Learn to build a lakehouse by activating SharePoint Online, creating the lakehouse, ingesting sample data, and building a report.
-- **Ingest data into the lakehous** : Gain knowledge on ingesting data into the lakehouse, focusing on the efficient and effective methods for data integration. 
-- **Prepare and transform data in the lakehouse** : Prepare and transform data within the lakehouse, focusing on data preparation techniques to ensure high-quality, actionable insights. This exercise covers essential practices for effective data transformation.
-- **Building reports in Microsoft Fabric** : Create and build reports in Microsoft Fabric, focusing on leveraging the platform's capabilities to generate actionable insights. This exercise involves designing and developing comprehensive reports.
+- **Create a Fabric workspace** : Gain experience on creating and setting up a Fabric workspace, including understanding prerequisites and executing the workspace creation process.
+- **Build a lakehouse** : Gain experience to build a lakehouse by activating SharePoint Online, creating the lakehouse, ingesting sample data, and building a report.
+- **Ingest data into the lakehouse** : Gain knowledge on ingesting data into the lakehouse, focusing on the efficient and effective methods for data integration. 
+- **Prepare and transform data in the lakehouse** : Gain experience to prepare and transform data within the lakehouse, focusing on data preparation techniques to ensure high-quality, actionable insights. This exercise covers essential practices for effective data transformation.
+- **Building reports in Microsoft Fabric** : Gain experience to create and build reports in Microsoft Fabric, focusing on leveraging the platform's capabilities to generate actionable insights. This exercise involves designing and developing comprehensive reports.
 
 ### Data and transformation flow
 
-This lab uses **Wide World Importers (WWI) sample data** to build this end-to-end lakehouse lakehouse. In this implementation, the sample data is stored in an Azure Data storage account in Parquet file format for all the tables. However, in real-world scenarios, data would typically originate from various sources and in diverse formats.
+This lab uses **Wide World Importers (WWI) sample data** to build this end-to-end lakehouse. In this implementation, the sample data is stored in an Azure Data storage account in Parquet file format for all the tables. However, in real-world scenarios, data would typically originate from various sources and in diverse formats.
 
 The following image shows the source, destination and data transformation:
 
