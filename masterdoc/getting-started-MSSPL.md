@@ -6,7 +6,7 @@
 
 In this hands-on lab, you will work through a comprehensive data processing and analytics flow. You'll begin by setting up the data source, which consists of Parquet files stored in an unpartitioned structure, with each table organized into its own folder. You will create a pipeline to ingest this historical or one-time data into a Lakehouse. Next, you'll create a Lakehouse, ingest the data into its files section, and then establish Delta Lake tables in the Tables section for structured storage. For data transformation, you will explore two approaches: using Notebooks with Spark for a code-first experience and utilizing pipelines or dataflows for a low-code or no-code experience. Finally, you'll learn how to consume this transformed data by leveraging the DirectLake feature of Power BI to create reports, dashboards, and directly query data from the Lakehouse. This hands-on experience will guide you through each step of managing, transforming, and visualizing data within a modern data architecture.
 
-## Objective
+## Objectives
 
 Understand how to set up a Fabric workspace, build a lakehouse, ingest and transform data, and create reports. By the end of this lab, you will be able to:
 
@@ -110,7 +110,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    
      ![](../media/01/asklater.png?raw=true)
 
-1. First-time users are often prompted to Stay Signed In, if you see any such pop-up, click on No.
+1. First-time users are often prompted to Stay Signed In, if you see any such pop-up, click on **No**.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
     
@@ -127,10 +127,6 @@ In this hands-on lab, you'll learn to set up a **Fabric workspace**, **build a l
 1. If you run into an issue where a file starts downloading (eg. file.html) in the VM or get stuck in between, refresh your browser and continue performing the lab:
 
    ![04](../media/01/04.png?raw=true)
- 
-1. Click Next from the bottom right corner to embark on your Lab journey!
-
-Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
 
 ## Support Contact
 
