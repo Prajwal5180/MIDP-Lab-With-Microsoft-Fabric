@@ -36,11 +36,15 @@ In this hands-on lab, you will work through the architecture flow illustrated in
 
 - **Microsoft Fabric** : Microsoft Fabric is a comprehensive analytics and data platform tailored for enterprises seeking an integrated solution. It covers all aspects of data management, including movement, processing, ingestion, transformation, real-time event routing, and reporting. The platform provides a full range of services, such as Data Engineering, Data Factory, Data Science, Real-Time Analytics, Data Warehousing, and Databases.
 
+- **Microsoft Fabric Lakehouse** : Microsoft Fabric Lakehouse is a comprehensive data architecture platform designed for storing, managing, and analyzing both structured and unstructured data in a unified environment. It offers flexibility and scalability, enabling organizations to handle extensive data volumes with a range of tools and frameworks for processing and analysis. By integrating with various data management and analytics tools, it provides a holistic solution for data engineering and analytics.
+
 - **SharePoint Online** : SharePoint Online is a cloud-based service from Microsoft that facilitates collaboration, document management, and content sharing within organizations. It enables users to create, store, and manage web-based documents and data, offering tools for team sites, document libraries, and lists.
 
 - **Fabric lakehouse** : Microsoft Fabric Lakehouse is a data architecture platform designed to store, manage, and analyze both structured and unstructured data in one unified location. It offers flexibility and scalability, enabling organizations to handle extensive data volumes through a range of tools and frameworks for processing and analysis. The platform integrates seamlessly with other data management and analytics tools, delivering a comprehensive solution for data engineering and analytics.
 
 - **Power BI** : Power BI is a suite of software services, applications, and connectors that collaborate to transform disparate data sources into cohesive, visually engaging, and interactive insights. Whether your data comes from an Excel spreadsheet or a mix of cloud-based and on-premises data warehouses, Power BI enables you to seamlessly connect to these sources, uncover and visualize key information, and share insights with anyone you choose.
+
+- **SQL** : SQL(Structured Query Language) is a standardized programming language used to manage and manipulate relational databases. It allows users to perform operations such as querying data, inserting, updating, and deleting records, as well as defining and altering database structures. SQL is essential for efficiently handling and analyzing structured data within relational databases.
 
 # Getting Started with the Lab
  
