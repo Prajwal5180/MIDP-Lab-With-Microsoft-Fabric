@@ -31,7 +31,7 @@ The following image shows the source, destination and data transformation:
 
 ## Pre-requisites
 
-To effectively perform these exercises, you need basic knowledge of Microsoft Azure, Microsoft Fabric, SharePoint Online, and data management principles. Familiarity with creating and managing lakehouses, data ingestion, transformation, and reporting in Microsoft Fabric or Power BI is also required.
+To effectively perform these exercises, you need basic knowledge of **Microsoft Azure**, **Microsoft Fabric**, **SharePoint Online**, and **data management principles**. Familiarity with creating and managing lakehouses, data ingestion, transformation, and reporting in Microsoft Fabric or Power BI is also required.
 
 ## Architecture
 
@@ -49,7 +49,11 @@ In this hands-on lab, the architecture flow shows the lakehouse end-to-end archi
 
    ![Lakehouse end-to-end architecture](../media/07/01.png)
 
+   ![data-transformation-flow](https://github.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/blob/dev/media/07/02.png?raw=true)
+
 ## Explanation of Components
+
+- **Microsoft Entra ID** : Microsoft Entra ID is a cloud-based identity and access management service that enables secure access to both external and internal resources. It allows users to seamlessly sign in to a wide range of applications, including Microsoft 365, the Azure portal, and other SaaS apps, as well as custom applications developed for an organization. By managing user identities and controlling access, Microsoft Entra ID enhances security and simplifies the user experience across various platforms and devices.
 
 - **Microsoft Fabric** : Microsoft Fabric is a comprehensive analytics and data platform tailored for enterprises seeking an integrated solution. It covers all aspects of data management, including movement, processing, ingestion, transformation, real-time event routing, and reporting. The platform provides a full range of services, such as Data Engineering, Data Factory, Data Science, Real-Time Analytics, Data Warehousing, and Databases.
 
@@ -58,8 +62,6 @@ In this hands-on lab, the architecture flow shows the lakehouse end-to-end archi
 - **Fabric lakehouse** : Microsoft Fabric Lakehouse is a data architecture platform designed to store, manage, and analyze both structured and unstructured data in one unified location. It offers flexibility and scalability, enabling organizations to handle extensive data volumes through a range of tools and frameworks for processing and analysis. The platform integrates seamlessly with other data management and analytics tools, delivering a comprehensive solution for data engineering and analytics.
 
 - **Power BI** : Power BI is a suite of software services, applications, and connectors that collaborate to transform disparate data sources into cohesive, visually engaging, and interactive insights. Whether your data comes from an Excel spreadsheet or a mix of cloud-based and on-premises data warehouses, Power BI enables you to seamlessly connect to these sources, uncover and visualize key information, and share insights with anyone you choose.
-
-- **Extract, transform, load (ETL) process** : Extract, Transform, Load (ETL) is a data pipeline process designed to gather data from multiple sources, transform it based on business rules, and load it into a target data repository. During the transformation phase, which occurs in a specialized engine, staging tables are often used to temporarily store data while it is being processed before it is finalized and loaded into its destination.
 
 # Getting Started with the Lab
  
