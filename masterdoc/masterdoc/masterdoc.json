@@ -1,0 +1,24 @@
+[
+    {
+        "Name": "Get data into Fabric Lakehouse",
+        "Language": "English",
+        "Files": [
+            {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/getting-started-MSSPL.md",
+                "Order": 1
+            },
+            {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/08.md",
+                "Order": 2
+            },
+            {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/09.md",
+                "Order": 3
+            },
+            {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/10.md",
+                "Order": 4
+            }
+        ]
+    }
+]
