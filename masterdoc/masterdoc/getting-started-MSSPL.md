@@ -92,6 +92,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
  
+
+## **Lab Guide Zoom In/Zoom Out**
+ 
+1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+   ![Manage Your Virtual Machine](../../media/231124(9).png)
+
 ## Let's Get Started with Azure Portal
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
@@ -122,9 +129,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. Click **Next** from the bottom right corner to embark on your Lab journey!
  
-    ![Start Your Azure Journey](../../media/01/num.png?raw=true)
-
-In this hands-on lab, you'll learn to set up a **Fabric workspace**, **build a lakehouse**, **ingest and transform data**, and **create reports**. The lab covers workspace creation, data integration, preparation techniques, and report development using Microsoft Fabric.
+   ![Start Your Azure Journey](../../media/01/num.png?raw=true)
 
 ## Support Contact
 
