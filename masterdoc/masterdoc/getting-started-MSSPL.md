@@ -122,13 +122,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
     ![Start Your Azure Journey](../../media/01/num.png?raw=true)
 
-In this hands-on lab, you'll learn to set up a **Fabric workspace**, **build a lakehouse** , **ingest and transform data**, and **create reports**. The lab covers workspace creation, data integration, preparation techniques, and report development using Microsoft Fabric.
-
-### Known Issues
-
-1. If you run into an issue where a file starts downloading (eg. file.html) in the VM or get stuck in between, refresh your browser and continue performing the lab:
-
-   ![04](../../media/01/04.png?raw=true)
+In this hands-on lab, you'll learn to set up a **Fabric workspace**, **build a lakehouse**, **ingest and transform data**, and **create reports**. The lab covers workspace creation, data integration, preparation techniques, and report development using Microsoft Fabric.
 
 ## Support Contact
 
