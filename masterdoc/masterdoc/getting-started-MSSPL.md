@@ -1,6 +1,6 @@
 # Get data into Fabric Lakehouse
 
-### Overall Estimated Duration: 3 Hours
+#### Overall Estimated Duration: 3 Hours
 
 ## Overview
 
