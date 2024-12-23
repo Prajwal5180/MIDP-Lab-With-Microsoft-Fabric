@@ -30,9 +30,7 @@ In this hands-on lab, you will work through the architecture flow illustrated in
 
 ## Architecture Diagram
 
-   ![Lakehouse end-to-end architecture](../media/07/01.png)
-
-   ![data-transformation-flow](https://github.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/blob/dev/media/07/02.png?raw=true)
+![data-transformation-flow](https://github.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/blob/dev/media/07/02.png?raw=true)
 
 ## Explanation of Components
 
