@@ -1,6 +1,6 @@
 # Get data into Fabric Lakehouse
 
-## Overall Estimated Duration: 3 Hours
+### Overall Estimated Duration: 3 Hours
 
 ## Overview
 
@@ -10,8 +10,10 @@ In this hands-on lab, you will work through a comprehensive data processing and 
 
 Understand how to set up a Fabric workspace, build a lakehouse, ingest and transform data, and create reports. By the end of this lab, you will be able to:
 
-- **Create a Fabric workspace**: Gain experience on creating and setting up a Fabric workspace, including understanding prerequisites and executing the workspace creation process.
+- **Create a Fabric workspace**: Gain experience in creating and setting up a Fabric workspace, including understanding prerequisites and executing the workspace creation process.
+
 - **Build a lakehouse**: Gain experience in building a lakehouse by activating SharePoint Online, creating the lakehouse, ingesting sample data, and building a report.
+
 - **Ingest data into the lakehouse**: Learn to ingest data into the lakehouse, focusing on efficient and effective data integration methods. 
 
 ## Pre-requisites
@@ -24,9 +26,7 @@ In this hands-on lab, you will work through the architecture flow illustrated in
 
 ## Architecture Diagram
 
-   ![Lakehouse end-to-end architecture](../../media/07/01.png)
-
-   ![data-transformation-flow](https://github.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/blob/dev/media/07/02.png?raw=true)
+![data-transformation-flow](https://github.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/blob/dev/media/07/02.png?raw=true)
 
 ## Explanation of Components
 
