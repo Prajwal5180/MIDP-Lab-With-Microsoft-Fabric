@@ -1,6 +1,6 @@
 # Get data into Fabric Lakehouse
 
-## Overall Estimated Duration: 4 Hours
+### Overall Estimated Duration: 4 Hours
 
 ## Overview
 
@@ -10,11 +10,15 @@ In this hands-on lab, you will work through a comprehensive data processing and 
 
 Understand how to set up a Fabric workspace, build a lakehouse, ingest and transform data, and create reports. By the end of this lab, you will be able to:
 
-- **Create a Fabric workspace** : Gain experience on creating and setting up a Fabric workspace, including understanding prerequisites and executing the workspace creation process.
-- **Build a lakehouse** : Gain experience to build a lakehouse by activating SharePoint Online, creating the lakehouse, ingesting sample data, and building a report.
-- **Ingest data into the lakehouse** : Gain knowledge on ingesting data into the lakehouse, focusing on the efficient and effective methods for data integration. 
-- **Prepare and transform data in the lakehouse** : Gain experience to prepare and transform data within the lakehouse, focusing on data preparation techniques to ensure high-quality, actionable insights. This exercise covers essential practices for effective data transformation.
-- **Building reports in Microsoft Fabric** : Gain experience to create and build reports in Microsoft Fabric, focusing on leveraging the platform's capabilities to generate actionable insights. This exercise involves designing and developing comprehensive reports.
+- **Create a Fabric workspace**: Gain experience in creating and setting up a Fabric workspace, including understanding prerequisites and executing the workspace creation process.
+
+- **Build a lakehouse**: Gain experience in building a lakehouse by activating SharePoint Online, creating the lakehouse, ingesting sample data, and building a report.
+
+- **Ingest data into the lakehouse**: Gain knowledge on ingesting data into the lakehouse, focusing on the efficient and effective methods for data integration. 
+
+- **Prepare and transform data in the lakehouse**: Gain experience in preparing and transforming data within the lakehouse, focusing on data preparation techniques to ensure high-quality, actionable insights. This exercise covers essential practices for effective data transformation.
+
+- **Building reports in Microsoft Fabric**: Gain experience in creating and building reports in Microsoft Fabric, focusing on leveraging the platform's capabilities to generate actionable insights. This exercise involves designing and developing comprehensive reports.
 
 ## Pre-requisites
 
@@ -32,19 +36,19 @@ In this hands-on lab, you will work through the architecture flow illustrated in
 
 ## Explanation of Components
 
-- **Microsoft Entra ID** : Microsoft Entra ID is a cloud-based identity and access management service that enables secure access to both external and internal resources. It allows users to seamlessly sign in to a wide range of applications, including Microsoft 365, the Azure portal, and other SaaS apps, as well as custom applications developed for an organization. By managing user identities and controlling access, Microsoft Entra ID enhances security and simplifies the user experience across various platforms and devices.
+- **Microsoft Entra ID**: Microsoft Entra ID is a cloud-based identity and access management service that enables secure access to both external and internal resources. It allows users to seamlessly sign in to a wide range of applications, including Microsoft 365, the Azure portal, and other SaaS apps, as well as custom applications developed for an organization. By managing user identities and controlling access, Microsoft Entra ID enhances security and simplifies the user experience across various platforms and devices.
 
-- **Microsoft Fabric** : Microsoft Fabric is a comprehensive analytics and data platform tailored for enterprises seeking an integrated solution. It covers all aspects of data management, including movement, processing, ingestion, transformation, real-time event routing, and reporting. The platform provides a full range of services, such as Data Engineering, Data Factory, Data Science, Real-Time Analytics, Data Warehousing, and Databases.
+- **Microsoft Fabric**: Microsoft Fabric is a comprehensive analytics and data platform tailored for enterprises seeking an integrated solution. It covers all aspects of data management, including movement, processing, ingestion, transformation, real-time event routing, and reporting. The platform provides a full range of services, such as Data Engineering, Data Factory, Data Science, Real-Time Analytics, Data Warehousing, and Databases.
 
-- **Microsoft Fabric Lakehouse** : Microsoft Fabric Lakehouse is a comprehensive data architecture platform designed for storing, managing, and analyzing both structured and unstructured data in a unified environment. It offers flexibility and scalability, enabling organizations to handle extensive data volumes with a range of tools and frameworks for processing and analysis. By integrating with various data management and analytics tools, it provides a holistic solution for data engineering and analytics.
+- **Microsoft Fabric Lakehouse**: Microsoft Fabric Lakehouse is a comprehensive data architecture platform designed for storing, managing, and analyzing both structured and unstructured data in a unified environment. It offers flexibility and scalability, enabling organizations to handle extensive data volumes with a range of tools and frameworks for processing and analysis. By integrating with various data management and analytics tools, it provides a holistic solution for data engineering and analytics.
 
-- **SharePoint Online** : SharePoint Online is a cloud-based service from Microsoft that facilitates collaboration, document management, and content sharing within organizations. It enables users to create, store, and manage web-based documents and data, offering tools for team sites, document libraries, and lists.
+- **SharePoint Online**: SharePoint Online is a cloud-based service from Microsoft that facilitates collaboration, document management, and content sharing within organizations. It enables users to create, store, and manage web-based documents and data, offering tools for team sites, document libraries, and lists.
 
-- **Fabric lakehouse** : Microsoft Fabric Lakehouse is a data architecture platform designed to store, manage, and analyze both structured and unstructured data in one unified location. It offers flexibility and scalability, enabling organizations to handle extensive data volumes through a range of tools and frameworks for processing and analysis. The platform integrates seamlessly with other data management and analytics tools, delivering a comprehensive solution for data engineering and analytics.
+- **Fabric lakehouse**: Microsoft Fabric Lakehouse is a data architecture platform designed to store, manage, and analyze both structured and unstructured data in one unified location. It offers flexibility and scalability, enabling organizations to handle extensive data volumes through a range of tools and frameworks for processing and analysis. The platform integrates seamlessly with other data management and analytics tools, delivering a comprehensive solution for data engineering and analytics.
 
-- **Power BI** : Power BI is a suite of software services, applications, and connectors that collaborate to transform disparate data sources into cohesive, visually engaging, and interactive insights. Whether your data comes from an Excel spreadsheet or a mix of cloud-based and on-premises data warehouses, Power BI enables you to seamlessly connect to these sources, uncover and visualize key information, and share insights with anyone you choose.
+- **Power BI**: Power BI is a suite of software services, applications, and connectors that collaborate to transform disparate data sources into cohesive, visually engaging, and interactive insights. Whether your data comes from an Excel spreadsheet or a mix of cloud-based and on-premises data warehouses, Power BI enables you to seamlessly connect to these sources, uncover and visualize key information, and share insights with anyone you choose.
 
-- **SQL** : SQL(Structured Query Language) is a standardized programming language used to manage and manipulate relational databases. It allows users to perform operations such as querying data, inserting, updating, and deleting records, as well as defining and altering database structures. SQL is essential for efficiently handling and analyzing structured data within relational databases.
+- **SQL**: SQL(Structured Query Language) is a standardized programming language used to manage and manipulate relational databases. It allows users to perform operations such as querying data, inserting, updating, and deleting records, as well as defining and altering database structures. SQL is essential for efficiently handling and analyzing structured data within relational databases.
 
 # Getting Started with the Lab
  
@@ -124,13 +128,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
     ![Start Your Azure Journey](../media/01/num.png?raw=true)
 
-In this hands-on lab, you'll learn to set up a **Fabric workspace**, **build a lakehouse** , **ingest and transform data**, and **create reports**. The lab covers workspace creation, data integration, preparation techniques, and report development using Microsoft Fabric.
-
-### Known Issues
-
-1. If you run into an issue where a file starts downloading (eg. file.html) in the VM or get stuck in between, refresh your browser and continue performing the lab:
-
-   ![04](../media/01/04.png?raw=true)
+In this hands-on lab, you'll learn to set up a **Fabric workspace**, **build a lakehouse**, **ingest and transform data**, and **create reports**. The lab covers workspace creation, data integration, preparation techniques, and report development using Microsoft Fabric.
 
 ## Support Contact
 
