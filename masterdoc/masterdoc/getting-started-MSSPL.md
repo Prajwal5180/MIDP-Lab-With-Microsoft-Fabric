@@ -4,7 +4,9 @@
 
 ## Overview
 
-In this hands-on lab, you will work through a comprehensive data processing and analytics flow. You'll begin by setting up the data source, which consists of Parquet files stored in an unpartitioned structure, with each table organized into its own folder. You will create a pipeline to ingest this historical or one-time data into a Lakehouse. Next, you'll create a Lakehouse, ingest the data into its files section, and then establish Delta Lake tables in the Tables section for structured storage. 
+In this hands-on lab, you will work through a comprehensive data processing and analytics flow. You'll begin by setting up the data source, which consists of Parquet files stored in an unpartitioned structure, with each table organized into its own folder. You will create a pipeline to ingest this historical or one-time data into a Lakehouse. Next, you'll create a Lakehouse, ingest the data into its files section, and then establish Delta Lake tables in the Tables section for structured storage.  
+
+You will utilize **Microsoft Fabric**, a unified data analytics platform that integrates seamlessly with various tools and services for end-to-end data processing. Using **Microsoft Fabric Workspace**, you will organize and manage your data assets efficiently. The **Lakehouse** in Microsoft Fabric serves as the central data repository, combining the scalability of a data lake with the structure and performance of a data warehouse. This enables you to perform analytics and reporting tasks effectively while ensuring a structured and organized data flow.
 
 ## Objectives
 
