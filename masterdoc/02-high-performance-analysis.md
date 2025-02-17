@@ -1,4 +1,4 @@
-# Exercise 3 - High-Performance Analysis with Azure Synapse Dedicated SQL Pools
+# Exercise 2 - High-Performance Analysis with Azure Synapse Dedicated SQL Pools
 
 ### Estimated Duration: 30 minutes
 
