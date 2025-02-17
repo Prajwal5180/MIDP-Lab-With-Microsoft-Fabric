@@ -1,4 +1,4 @@
-# Exercise 5 - Log and telemetry analytics
+# Exercise 3 - Log and telemetry analytics
 
 ### Estimated Duration: 30 minutes
 
