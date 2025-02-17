@@ -10,16 +10,15 @@
       {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/msspl-real-time-analytics-with-synapse.md",
         "Order": 2
-      }
+      },
       {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/refs/heads/dev/masterdoc/02-high-performance-analysis.md",
         "Order": 3
-      }
+      },
       {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/refs/heads/dev/masterdoc/03-log-telemetry-analytics.md",
         "Order": 4
-      }
-      
+      }  
     ]
   }
 ]
