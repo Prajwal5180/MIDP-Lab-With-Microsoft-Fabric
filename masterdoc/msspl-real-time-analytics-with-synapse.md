@@ -1,17 +1,17 @@
-### Hands-On-Lab: Data ingestion from a spectrum of analytical and operational data sources into the Lakehouse. <a name="data-ingestion"></a>
+# Exercise 1 : Data ingestion from a spectrum of analytical and operational data sources into the Lakehouse.
 
-As a data engineer at Wide World Importers, you will start by landing data from a variety of sources into the Lakehouse. This data will be further cleansed, processed, and conformed by using Azure Databricks and Delta Live Tables. This is a preparation step for downstream consumption of the data by data scientists and business intelligence analysts. Data sources include data related to its customers, products, marketing campaigns, social media, and sales transactions. This data is often generated in raw files format such as CSV, JSON, unstructured files, and even images. A lot of the existing data is historical as well.
+### Estimated Duration: 1 Hour
 
-To boost customer satisfaction, gain a competitive advantage, and ultimately drive revenue growth, Wide World Importers wants to analyze its data to obtain meaningful insights related to their customers, marketing campaigns, and sales forecasts. However, their immediate challenge is to generate and use near real-time streaming data. So, they installed IoT devices in their stores to analyze customer shopping patterns and thermostat readings. They also set up Azure Data Explorer (ADX) with anomaly detection to correlate in-store traffic and store temperatures. As a result, they now have a large volume of real-time streaming data related to in-store traffic, temperature readings and anomaly detection.
+In this exercise, you'll learn to ingest data from various sources, including databases and event streams, into the Synapse Lakehouse for centralized storage and processing.
 
-In this HOL, you will explore how to ingest near real-time data into the Lakehouse and derive meaningful insights out of them.
+## Lab Objectives
+
+In this lab, you will perform:
+
+- **Task 1**: Explore a Streaming data and analytics pipeline using ADX for a near real time analytics scenario.
 
 
-#### Task 1: Explore a Streaming data and analytics pipeline using ADX for a near real time analytics scenario. <a name="streaming-data"></a>
-
-Wide World Importers wants its customers to have a pleasant in-store shopping experience. Maintaining the optimal temperature in stores and wine coolers is one way to accomplish this objective.
-
-Consider that the Black Friday Sale in-store event has just started at 6:00 AM EST, and customers are arriving in large numbers at the Miami store. As described earlier, thermostat data from the stores is streamed in real-time to an Azure Event Hub and then into an Azure Data Explorer (ADX) pool for analysis.
+## Task 1: Explore a Streaming data and analytics pipeline using ADX for a near real time analytics scenario.
 
 In this task, you will use ADX to explore thermostat data from the stores streamed in near real-time to an Azure Event Hub.
 
@@ -139,9 +139,10 @@ And, this will take you to a webpage that will confirm **Data Simulation** has s
     ![Select the ThermostatOccupancyScript Sript](https://github.com/CloudLabsAI-Azure/Ignite-lab/blob/main/media/image1148.png?raw=true)
 
 37. In the **Connect to** dropdown list select the data explorer pool starting with **analyticspool-**.
->**Note:** If you do not see this option, click on the ellipsis [...] next to Publish on the top bar.
 
->**Note:** If required, collapse the panes on the left using the << icon at the top right of each pane.
+    >**Note:** If you do not see this option, click on the ellipsis [...] next to Publish on the top bar.
+
+    >**Note:** If required, collapse the panes on the left using the << icon at the top right of each pane.
 
 38. In the **Use database** dropdown list, select **AnalyticsDB**.
 
@@ -153,7 +154,7 @@ And, this will take you to a webpage that will confirm **Data Simulation** has s
 
 41. In the **Results** pane (located along the bottom), review the query result expressed as a chart. Please note that it may take upto 2-3 minutes to accumulate data. If you do not see any result please re-run query after sometime. 
 
->**Note:** If you dont see data in the query result, wait for few minutes and try again since the data will take a few minutes to start streaming. In case your query returns an error, chances are that the thermostat table was not created successfully in previous steps. You may have to create that table with a different name e.g. Thermostat1, update the KQL query accordingly and re-execute the KQL query.  
+    >**Note:** If you dont see data in the query result, wait for few minutes and try again since the data will take a few minutes to start streaming. In case your query returns an error, chances are that the thermostat table was not created successfully in previous steps. You may have to create that table with a different name e.g. Thermostat1, update the KQL query accordingly and re-execute the KQL query.  
 
    ![Review the query result ](https://github.com/CloudLabsAI-Azure/Ignite-lab/blob/main/media/img_graph1.png?raw=true)
 
@@ -161,4 +162,8 @@ And, this will take you to a webpage that will confirm **Data Simulation** has s
 
 42. Notice that the temperature in the Miami store is oscillating between 65 and 70 degrees Fahrenheit. Based on these insights, we are able to adjust the temperatures to optimal level.
 
-----
+## Summary
+
+In this exercise, we set up a streaming data pipeline using Azure Data Explorer (ADX), ingested streaming data, and performed real-time analytics to gain immediate insights. This demonstrated efficient processing of high-volume data for time-sensitive scenarios.
+
+### You have successfully completed this exercise.
