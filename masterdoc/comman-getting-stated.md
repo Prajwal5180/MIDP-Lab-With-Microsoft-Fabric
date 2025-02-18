@@ -1,6 +1,6 @@
 # Real Time Analytics with Synapse
 
-### Overall Estimated Duration: 4 hours
+### Overall Estimated Duration: 2 hours
 
 ## Overview
 
