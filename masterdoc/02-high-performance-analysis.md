@@ -16,14 +16,11 @@ The tasks you will perform in this exercise are:
 - Task 2 - Investigate query performance and table design
 - Bonus Challenge
 
----
-
 > **Note**: The tasks in this exercise must be run against the dedicated SQL pool (as opposed to the ones from exercise 1, which were run against the serverless SQL pool
 named "built-in" pool). Make sure you have `SQLPool01` selected before running each query:
 
 ![Run queries against a dedicated SQL pool](../media/ex04-run-on-sql-pool.1.png)
 
----
 
 ## Task 1 - Use a SQL Synapse Pool query to understand a dataset
 
@@ -116,4 +113,4 @@ This simple example demonstrates one of the core challenges of modern, massively
 
 In this exercise, we analyzed data using Azure Synapse Dedicated SQL Pools. We explored SQL Pool queries to gain insights into customer purchasing behavior and examined the performance differences between two fact tables with different distribution methods. We learned that table design, particularly distribution strategy, can significantly impact query performance. Additionally, we experienced how optimized data distribution can dramatically reduce query execution time, highlighting the importance of thoughtful table design in modern data platforms.
 
-### You have successfully completed the lab.
+### You have successfully completed this exercise.
