@@ -18,6 +18,10 @@
         {
           "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/04.md",
           "Order": 4
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/05.md",
+           "Order": 5
         }
       ]
     }
