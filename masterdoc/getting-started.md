@@ -1,4 +1,4 @@
-# Real Time Analytics with Fabric
+# Real Time Analytics with Synapse
 
 ### Overall Estimated Duration: 4 Hours
 
