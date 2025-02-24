@@ -1,6 +1,6 @@
-# Analytics in the Microsoft Intelligent Data Platform with Microsoft Fabric
+# Real Time Analytics with Fabric
 
-### Overall Estimated Duration: 8 Hours
+### Overall Estimated Duration: 4 Hours
 
 ## Overview
 
