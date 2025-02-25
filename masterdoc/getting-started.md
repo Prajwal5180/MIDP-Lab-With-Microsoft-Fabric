@@ -58,7 +58,7 @@ Welcome to your Analytics in the Microsoft Intelligent Data Platform with Micros
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![01](../media/01/01.png?raw=true)
+![01](../media/01/new-real-time-feb-1.png?raw=true)
 
 ### Virtual Machine & Lab Guide
  
@@ -68,19 +68,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![](../media/01/env-01.png)
+![](../media/01/new-real-time-feb-2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![](../media/01/split-01.png)
+![](../media/01/new-real-time-feb-16.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
-![](../media/01/resourses.png)
+![](../media/01/new-real-time-feb-3.png)
 
 ### Known Issues
 
@@ -94,11 +94,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
    **Note:** If you are not using the environment, pause the VM by navigating to the **Resources Tab** and de-allocate it.
 
-   ![06](../media/01/06.png?raw=true)
+   ![06](../media/01/new-real-time-feb-17.png?raw=true)
 
 1. If you wish to start the environment or resume the lab, navigate to the **Resources Tab** and start it (It may take up to 5 minutes for the VM to be up and running).
 
-     ![07](../media/01/07.png?raw=true)
+     ![07](../media/01/new-real-time-feb-18.png?raw=true)
    
    **Note:** If you are unable to proceed with the lab execution, here are the links to the click-by-click version of the lab to continue.   
 
@@ -111,7 +111,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser which is created on the desktop.
 
-   ![08](../media/01/08.png?raw=true)
+   ![08](../media/01/new-real-time-feb-4.png?raw=true)
 
 1. When you click on Azure portal, the edge browser will ask you to sign in to sync data, click on **Start without your data**.
 
@@ -159,12 +159,8 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 1. On the **Resource groups** page, you can view the pre-deployed resource group **analyticsSolution**.
 
    ![16](../media/01/16.png?raw=true)
-
-15. After completing each exercise, you have the option to validate it. Simply click on **Lab Validation** and initiate the validation process for the specific task; however, it's important to note that lab validations are not mandatory.
-    
-    ![](../media/01/validate.png)
  
-16. Click Next from the bottom right corner to embark on your Lab journey!
+1. Click Next from the bottom right corner to embark on your Lab journey!
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way.
 
