@@ -4,19 +4,19 @@
       "Language": "English",
       "Files": [
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/getting-started.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/getting-started.md",
           "Order": 1
         },
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/03.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/Real-time-01.md",
           "Order": 2
         },
         {
-          "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/04.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/Real-time-02.md",
           "Order": 3
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/05.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/MIDP-Lab-With-Microsoft-Fabric/dev/masterdoc/Real-time-03.md",
            "Order": 4
         }
       ]
