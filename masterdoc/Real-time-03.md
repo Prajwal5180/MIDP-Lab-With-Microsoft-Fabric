@@ -1,0 +1,436 @@
+# Exercise 3: Explore Machine Learning and Business Intelligence scenarios on the Lakehouse. <a name="data-science-and-analytics-on-the-Lakehouse"></a>
+
+### Estimated Duration : 45 minutes
+
+## Architecture Diagram
+
+![Architecture Diagram](../media/image3100.png)
+
+In this exercise, you will explore ML and BI scenarios on the Lakehouse using Azure Databricks MLflow, Power BI, and SQL Analytics with Azure Synapse Serverless and Databricks.
+
+## Objectives
+
+- Task 3.1: Review the MLOps pipeline using the Azure Databricks managed MLflow
+- Task 3.2: Leverage Power BI to derive actionable insights from data in the Lakehouse
+- Task 3.3: Explore SQL Analytics with Azure Synapse Serverless
+- Task 3.4: Explore SQL Analytics with Azure Databricks
+
+## Task 3.1: Review MLOps pipeline using the Azure Databricks managed MLflow and Operationalized as an ML service in Azure ML<a name="ml-model-using-ml-flow"></a>
+
+Now that we've ingested and processed our customer data, we want to understand what makes one customer more likely to churn than another, and ultimately see if we can produce a machine-learning model that can accurately predict if a particular customer will churn.
+
+We would also like to understand our customer's sentiments so we can create targeted campaigns to improve our sales. 
+
+1. Select the **Workspace (1)** icon (first icon) in the left pane, click on the **Workspace (2)** folder and then select the **ML Solutions in OneBox (3)** notebook. Once the notebook is open, click on > to expand notebooks **Table of content**.
+
+   ![](../media/04/midp-img-4.png)
+
+   In this task, you won’t run any cells. Instead, you will explore the selected cells and review their outcomes.
+   In the scatter-plot chart below, you can see the correlation between:
+
+   - Customer churn,
+   - Amount spent by the customer, and
+   - Number of months as a customer (tenure).
+
+   Here you will find that most of the customers who churn are those who spend the least amount of money and have been customers for fewer months.
+
+2. Scroll down the notebook to review the **cmd 11** cell and then review the output for **Exploratory Data Analysis**.
+
+   ![cmd 11](../media/image3103.png) 
+
+3. Review the **cmd 29** cell.
+
+   By analyzing Customer Churn data, we create multiple Machine Learning models.
+
+   ![Runs using a parallel coordinates](../media/image3115.png) 
+
+   The best ML model for Customer Churn is selected and registered with the Azure model registry.
+
+   **Operationalized as an ML service using MLOps in Azure ML/AI**.
+
+4. Review the **cmd 44** cell to load Azure ML Workspace.
+
+   ![Load Azure ML workspace](../media/image3119.png) 
+
+   The MLflow plugin **azureml-mlflow** is used to deploy the Customer Churn ML model to Azure ML. The deployed ML model will be used to predict Customer Churn.
+
+   **Twitter Sentiment Score Custom ML Model**
+
+   *This model helps Wide World Importers analyze the sentiment of their customers based on what's trending on social media platforms like Twitter. Popular social media sentiments can then be used to create effective marketing campaigns for the target audience.*
+
+5. On the left, select the small arrow to expand the sidebar. Collapse the **Customer Churn Model..** section and then select **Twitter Sentiment Score Model**.
+
+   ![Twitter sentiment score model](../media/img316.png)
+
+6. Review the **cmd 75** cells for training and validation of the customer sentiment model. *Here the Twitter sentiment model is trained for further consumption.*
+
+   ![Customer model train and validation](../media/image3126.png)
+
+   **Campaign Analytics**
+
+7. From the sidebar, select **Campaign Analytics**.
+
+   ![Campaign Analytics](../media/image3128.png) 
+
+8. Review the **cmd 88** cell.
+
+   *Wide World Importers decided to run a number of campaigns using the Twitter sentiment model, which was trained in the cmd 75 cells, to reduce customer churn and increase revenue.*
+  
+   ![cmd 88](../media/image3129.png)  
+
+   **Sales Forecasting**
+
+9. From the sidebar, scroll down and select **Sales Forecasting**.
+
+    ![Sales Forecasting](../media/image3132.png) 
+
+    A sales forecasting model was used by Wide World Importers to validate if their approach to reducing churn and improving sales was effective.
+
+    *Here you are forecasting sales using a Regression model and deploying it to Azure ML as a service using a model registered in Azure Databricks.*
+
+10. Review the **cmd 127** cell where model deployment is created.
+
+    ![Model Deployement](../media/image3136.png)  
+
+    *The model is deployed to an Azure ML endpoint from which it can be consumed to predict sales.*
+
+11. Review the **cmd 133** cell to see the sales forecast using store data after launching the campaigns.
+
+    ![Store data after the campaigns ](../media/image3138.png)  
+
+    *All these analyses using MLOps helped Wide World Importers predict a positive sales forecast and a successful year ahead*.
+
+---
+
+## Task 3.2: Leverage Power BI to derive actionable insights from data in the Lakehouse. <a name="power-bi-report-to-analyse-data-in-the-Lakehouse"></a>
+
+For this task, the date is November 1. Wide World Importers now needs to prepare for a successful Cyber Monday Sale event. Good news! The enriched datasets sourced from disparate data sources and the best-performing model outputs have now been placed in the Lakehouse for Power BI consumption.
+
+In this task, you will work with Power BI to reveal some valuable insights.
+
+   **Note:** Please make sure you are **logged into the VM** for the following steps.
+
+1. Open a new web session (tab) in the VM, and then enter: **https://powerbi.com**.
+
+    > **Note:** Dismiss any popups that appear on your screen.
+
+2. In the workspaces pane, select **My Workspace**.
+
+    ![](../media/05/E3-T3.2-S2-PowerBi.png)
+
+3. To upload a Power BI Desktop file, click on the **Import (1) >>Report or Paginated Report (2) >>From this Computer** **Upload (3)**.
+
+    > **Note:** Please make sure you are **logged into the VM** for the following steps.
+
+    ![](../media/new-real-time-feb-14.png)
+
+4. In the **Open** window, navigate to the **C:\LabFiles\artifacts\reports** folder, and select the **AnalyticsDemoReport.pbix** file.
+
+5. Select **Open**.
+
+    ![](../media/imageFilePath.png) 
+
+6. Notice that a Power BI report and dataset have been added to your workspace.
+
+7. To open the report, select the **AnalyticsDemoReport**.
+
+    ![](../media/new-real-time-feb-15.png)
+
+     > **Note:** If needed, collapse the panes on the left using the << icons on the top right of the pane. This will maximize the screen and provide a better visual.
+
+     > **Note:** You can zoom or magnify the report by using the option given at the bottom, you can also open a tile in a full-screen view by clicking on the focus mode icon.
+   
+    ![](../media/powerbi-quicknote.png)
+
+8.  This report has three sections:
+    - Churn Analysis
+    - Campaign Analytics
+    - Website Analytics
+ 
+    ![PowerBI Report Name](../media/image3227.png)
+
+9. Let's navigate to the **Churn Analysis Tab,** where we analyze Customer Churn. This report, along with Campaign Analytics and Website Analytics reports in Power BI, is coming from the data Lakehouse that we created in earlier exercises.
+
+   ![PowerBI Report Buttons](../media/img3210.png)
+
+10. In the Scatter Chart on the left, the black dots represent customers more likely to churn, and the blue dots represent customers less likely to churn.
+Notice that when customer tenure is low and their spending amount is low, the customers are more likely to churn.
+
+11. With this insight, Wide World Importers decides to target customers with lesser tenure and lesser spending amounts through their new campaigns.
+
+    ![Scatter chart](../media/image3229.png)
+
+    Now, let's go the Campaign Analytics. 
+
+
+12. Select the **Campaign Analytics** tab from the top right pane to navigate to the Campaign Analytics report.
+
+    ![Select Campaigns Analytics](../media/image3238.png)
+
+13. In this Campaign Analytics report, the Bar chart shows that the most popular campaigns launched are **gogreen** and **sustainablefashion**. 
+
+    ![Campaigns report - Bar chart](../media/image3239.png)
+
+14. Select **Website Analytics** from the top right pane to navigate to the Website Analytics Report.
+
+    ![Website Analytics](../media/imageWebsiteAnalytics.png)
+
+    Here we see an immediate problem for Wide World Importers.
+    The bounce rate is high. It looks like a large population of their customers/visitors leave their website without much activity.
+
+    Per this Donut chart, it seems that the bounce rate is high because around 57 % of the online customers are not happy. 
+
+    ![Website Analysis Report page](../media/image3242.png)
+
+    Let's understand more about these **not happy** customers.  
+
+15. Click on **Not Happy** on the Donut chart to filter the report page.
+
+    ![Not Happy Customers](../media/imageDonutChart.png)
+  
+    The **site visitors by age group** chart shows that most of the "Not Happy" customers are in the age group 31 to 40. It seems that millennials make up the majority of unhappy online customers. Now, let's see what these millennials typically shop for online.
+ 
+    ![Site visitors by age group](../media/imageAgeGroup.png)
+
+    *Hover over the bars to see the visuals of the products bought by repeat customers.*
+
+    ![Repeat customers](../media/beach-product-1.png)
+
+16. We know that the millennials from the biggest customer segment are "Not Happy" when...
+
+    - they do not find the product they searched for on the website.
+    - they were redirected to the Wide World Importers website from a third-party website.
+    - the website user experience on their mobile phones is not good.
+    - they are not able to find discounts on the website.
+
+    ![Repeat Customers Chart](../media/imageRepeatCustomersGraph.png)
+
+    As a result, we can see that we need to improve the user experience on the website for product search and make sure that it renders correctly on mobile phones.
+  
+    Now, let's navigate to the key influencers. 
+
+17. Select **Top segments** to show the details.
+
+    ![Key influencers Chart](../media/websiteAnalytics-keyInfluencers.png)
+
+18. Click on the first bubble and see the details for Segment 1.
+
+    ![ ](../media/image3248.png)
+
+      *Segment 1 shows that it comprises 94.5% of customers who are not happy. It also shows that 94.5 % of the "Not Happy" customers experienced failed product searches. These are the millennials who are using their mobile devices for shopping.*
+
+    ![Millenials using mobile phone](../media/imagePowerBI.png)
+ 
+As a result of this analysis, Wide World Importers reduced their bounce rate by implementing a mobile-friendly website with fast product searches, focusing on high-demand products for millennials.
+These changes not only improve the bounce rate dramatically, but they also reward Wide World Importers with unprecedented sales at their Cyber Monday Sale event. 
+
+Let's see how, on an ongoing basis, if there are any business needs to run ad-hoc time-critical queries, it can be achieved via custom queries. 
+
+We will discuss that in more detail in the next task.
+
+-------------
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="0e18520e-56dc-4341-a12b-17e1967937e7" />
+
+## Task 3.3: Explore SQL Analytics with Azure Synapse Serverless. <a name="sql-analytics-with-synapse"></a>
+
+Data engineers are often required to support ad hoc and time-critical queries in addition to regularly scheduled reports.
+
+In this task, you will learn how to perform custom SQL and business intelligence workloads on the data lake. You will query the data lake by using Azure Synapse Analytics. Specifically, you will rely upon Azure Synapse serverless SQL pools, which is a service that queries data in a data lake. It’s important to understand that the data can be queried without the need to move it into tables.
+
+1. The user need Storage Blob Data Owner role to perform this task, to do that, navigate to **analyticsSolution** resource group and from the resource list, select **storage<inject key="DeploymentId"></inject>** storage account.
+
+    ![](../media/03/midp-img-14.png)
+
+2. On Storage account pane, select **Access Control (IAM) (1)**, select **+Add (2)** and click on **Add role assignment (3)**.
+
+    ![](../media/03/midp-img-15.png)
+
+3. In the **Add role assignment** pane, search and select **Storage Blob Data Owner** role and click on **Next**.
+
+    ![](../media/03/midp-img-16.png)
+
+4. In the next pane, use **+Select members (1)**, search and select the user **ODL_User <inject key="DeploymentId"></inject> (2)** which is assigned to you for this session and click on **Review + assign**
+
+    ![](../media/03/midp-img-17.png)
+
+    >**Note:** Once the role is assigned, make sure to log out and log back in to ensure that role assignment is updated.
+
+5. In the search box (located across the top of the page) on the Azure portal web session (tab), enter: **Synapse Analytics**
+
+6. In the search results pane, select **Azure Synapse Analytics**.
+
+   ![Select Azure Synapse Analytics](../media/img332.png)
+
+7. In the filtered results, select the Azure Synapse resource.
+
+   ![Select Azure Synapse resource](../media/image3303.png)
+
+   >**Note:** You might see Synapse workspace resource name with a different suffix in your Azure Portal.
+
+8. In the **Open Synapse Studio** tile, select the **Open** link.
+
+   ![Open Synapse studio](../media/new-real-time-feb-6.png)
+
+   *Synapse Studio opens in a new web session (tab).*
+
+9. In Synapse Studio, on the left, select the **Develop** hub icon (the third from the top).
+
+   *In Synapse Studio, you can use T-SQL to directly query data in a data lake by using a serverless SQL pool. That way, you can achieve rapid data exploration.*
+
+10. In the **Develop** pane, expand **SQL scripts**.
+
+11. Select the **1 Query Campaign And Twitter Data Using T-SQL Language** script.
+
+      ![Query Campaign And Twitter Data Using TSQL Language](../media/image3307.png)
+   
+   *You can directly query external files stored in ADLS Gen2 storage without first copying or loading the data into a specialized store. You can query the data by using the familiar T-SQL syntax.*
+
+12. In the **Connect to** dropdown list, ensure that **Built-in** is selected.
+
+    *You will use the built-in endpoint for this service that’s provided within every Azure Synapse workspace. It’s a Synapse serverless SQL pool.*
+      > **Note:** Collapse the panes on the left by selecting the << icon on the top right of the panes.
+
+13. In the **Use database** dropdown list, ensure that **AnalyticsServerlessPool** is selected.
+
+14. To query the first 100 campaigns, in the script file, select lines 5-12.
+
+15. Select **Run**.
+
+16. Review the query result in the lower pane.
+
+      ![Select Run](../media/img3312.png)
+   
+   We can also directly query external files stored in Azure storage without copying or loading data into a specialized store, all using familiar T-SQL dialects. This is a quick and easy way to read the content of the files without pre-configuration.
+   
+   A default, built-in, endpoint for this service is provided within Synapse workspace.
+
+   *You will now create a view of the campaign file.*
+
+17. To create a view that queries the first 100 campaigns, select lines 35-44 in the script file.
+
+18. Select **Run** to create a view of the Campaign file in the Serverless pool.
+
+      ![Select Run](../media/query35-44.png)
+   
+   With the relevant metadata placed in an Azure storage account, the views will allow us to reuse those queries in other places as well such as Power BI, in conjunction with a serverless SQL pool.
+
+   *Executing ad hoc queries and creating views over data in the data lake by using a Synapse serverless SQL pool is straightforward*.
+
+   To verify the view that just got created.
+
+19. Select **Data** from the left pane.
+
+20. Under **SQL Database**, expand **AnalyticsServerlesspool(SQL)**, expand the **Views** folder.
+
+21. Expand **dbo.Vw_CampaignData** to open the **Columns** folder and review the columns.
+
+    ![The view created by running the query](../media/img3317.png)
+   
+   We can do the same even with Databricks. Let us see how.
+
+----
+
+## Task 3.4: Explore SQL Analytics with Azure Databricks. <a name="explore-sql-analytics-with-azure-databricks"></a>
+
+Azure Databricks provides an environment that allows you to run quick ad hoc SQL queries on your data lake. Queries support multiple visualization types that help you explore query results from different perspectives.
+
+In this task, you will explore some SQL analytics features of Azure Databricks, including exporting, importing, and running a workbook.
+
+1. In the Azure portal web session (tab), in the search box (located across the top of the page), enter: **Azure Databricks**
+
+2. In the search results pane, select Azure Databricks.
+
+   ![Select Azure Databricks](../media/image3402.png)
+
+3. In the **Azure Databricks** page, select the resource that has a name starting with **databricks**.
+
+   *Note: Each student has their own unique instance of this resource. Each Azure Databricks workspace is provisioned with a full-featured development environment.*
+
+   ![Select Azure Databricks resource](../media/img343.png)
+
+4. In the Azure Databricks resource page, select **Launch Workspace**.
+  
+   ![Select Azure Databricks resource](../media/image2104.png)
+
+   *A new web session (tab) opens.*
+
+   *You will now export a Databricks notebook in HTML format to your local machine.*
+
+5. In the Databricks web session (tab), at the left, Select **Workspace (1)** from the left navigation pane, click on **Workspace (2)** folder and Select the **04_SQL_Analytics_On_Delta_Live_Tables (3)** notebook.
+
+   ![](../media/04/midp-img-5.png)
+
+6. Review cmd 4 cell.
+
+   **Raw Twitter Data - Bronze**
+
+   *The bronze layer stores the raw, unprocessed data from Twitter API pulls. By leaving it in its raw state, there's an option to reprocess it for different purposes in the future. Thanks to Azure Data Lake Gen2, it is possible to maintain this data for as long as possible at a very low cost.*
+   *The bronze layer is usually the domain of data engineers who build pipelines to refine this data and forward it into the Silver layer.*
+   
+   ![Raw Twitter data](../media/twitter-dataBronze.png)
+
+7. Review cmd 7 cell.
+
+   **Filtered Twitter Data - Silver**
+
+   *In the Silver layer, the raw Twitter data is curated into something more usable for data scientists.*
+   *They can take up this cleaned-up data product and develop features for machine learning models as well as aggregated analytical datasets for data analysts*.
+   
+   ![Filtered Twitter data](../media/filter-twitter-silver.png)
+
+8. Review cmd 9 cell.
+
+   **Curated Twitter Data - Gold**
+
+   *The Gold layer is to enhance and refine the silver layer datasets even further so that it is ready for fit-for-purpose tables and views for specific analytical needs.*
+   *Here we've augmented the Twitter data with a machine-learning model to identify the sentiment (positive, neutral, or negative) of each tweet.*
+   
+   ![Curated Twitter data](../media/twitter-gold.png)
+
+9. Review cmd 11 cell.
+
+   **Aggregations Are A Great User Experience Enhancement**
+
+   *By pre-emptively aggregating the data that rarely or slowly changes, it provides a great performance benefit to the end users.*
+   *The DLT pipeline performs this aggregation of hashtag counts by the geolocation of the tweets.*
+   By updating this every time more tweets are ingested, it is possible to keep the aggregation table up-to-date and then quickly consume and visualize it in tools like Power BI. One nice feature of Databricks notebooks is if a cell produces a DataFrame output (like the one below), you can also profile the data as well as generate quick visualizations. Throw in Markdown and comments, and notebooks are a super convenient way to collaborate and communicate with your team, leadership, customers, and other stakeholders.
+   
+   ![Aggregations Are A Great User Experience Enhancement](../media/aggregation-twitter.png)
+
+10. Review cmd 20 cells.
+
+    **Z-Order Optimization**
+
+    *Z-ordering is a technique to co-locate related information in the same set of files.*
+    *This co-locality is automatically used by Delta Lake on Databricks data-skipping algorithms.*
+    *This behavior dramatically reduces the amount of data that Delta Lake on Databricks needs to read.*
+
+    ![Z-Order Optimization](../media/z-optimization.png)
+
+11. Review cmd 22 cell.
+
+    **Caching**
+
+    *Caching reduces scanning of the original files in future queries. It caches the contents of a table in the Apache Spark cache. If a query is cached, then a temporary view is created for this query.*
+
+    ![Caching](../media/caching-twitter.png)
+
+12. Review cmd 24 cell.
+
+    **Time Travel**
+
+    *In the audit history it is possible to see the history of the different versions of the table as well as load and display any of those versions.*
+
+    ![Time Travel](../media/timetravel-twitter.png) 
+
+## Summary
+
+In this exercise, you have worked on ML and BI scenarios on the Lakehouse using Azure.
+
+### You have successfully completed the lab!

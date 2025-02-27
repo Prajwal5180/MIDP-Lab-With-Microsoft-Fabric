@@ -1,0 +1,287 @@
+# Exercise 1: Data ingestion from a spectrum of analytical and operational data sources into the Lakehouse. <a name="data-ingestion"></a>
+
+### Estimated Duration : 1 Hour
+
+As a data engineer at Wide World Importers, you will start by landing data from a variety of sources into the Lakehouse. This data will be further cleansed, processed, and confirmed by using Azure Databricks and Delta Live Tables. This is a preparation step for the downstream consumption of the data by data scientists and business intelligence analysts. Data sources include data related to its customers, products, marketing campaigns, social media, and sales transactions. This data is often generated in raw file formats such as CSV, JSON, unstructured files, and even images. A lot of the existing data is historical as well.
+
+To boost customer satisfaction, gain a competitive advantage, and ultimately drive revenue growth, Wide World Importers wants to analyze its data to obtain meaningful insights related to their customers, marketing campaigns, and sales forecasts. However, their immediate challenge is to generate and use near real-time streaming data. So, they installed IoT devices in their stores to analyze customer shopping patterns and thermostat readings. They also set up Azure Data Explorer (ADX) with anomaly detection to correlate in-store traffic and store temperatures. As a result, they now have a large volume of real-time streaming data related to in-store traffic, temperature readings and anomaly detection.
+
+In this exercise, you will explore how to ingest near real-time data into the Lakehouse and derive meaningful insights from them.
+
+## Objectives
+
+- Task 1.1: Explore a Streaming data and analytics pipeline using ADX for a near real-time analytics scenario
+- Task 1.2: Explore a few Synapse pipelines that ingest raw data from analytical data sources to the Bronze layer of the Data Lake
+- Task 1.3: Explore a few Synapse pipelines that ingest raw data from operational data sources to the Bronze layer of the Data Lake
+
+## Task 1.1: Explore a Streaming data and analytics pipeline using ADX for a near real-time analytics scenario. <a name="streaming-data"></a>
+
+Wide World Importers wants its customers to have a pleasant in-store shopping experience. Maintaining the optimal temperature in stores and wine coolers is one way to accomplish this objective.
+
+Consider that the Black Friday Sale in-store event has just started at 6:00 AM EST, and customers are arriving in large numbers at the Miami store. As described earlier, thermostat data from the stores is streamed in real-time to an Azure Event Hub and then into an Azure Data Explorer (ADX) pool for analysis.
+
+In this task, you will use ADX to explore thermostat data from the stores streamed in near real-time to an Azure Event Hub.
+
+1. In the search results pane, select **Resource groups**.
+
+   ![In the search results pane, select the Resource group](../media/new-real-time-feb-5.png) 
+
+2. In the **Resource groups** page, in the filter box, enter: **analyticsSolution**.
+
+3. In the filtered results, select the resource group that has a named with **analyticsSolution**.
+
+   ![In the filtered results, select the resource group](../media/new-real-time-feb-5.png) 
+
+4. In the resources filter box for resources, search for **app**.
+
+5. In the filtered results, select the **App Service** named **app-realtime-kpi-analytics-<inject key="DeploymentID" enableCopy="false"/>**.
+
+   ![Select the app service](../media/imageAppServices.png) 
+
+6. Select **Browse** (on the top left). This action will start the data simulation required to execute this task successfully (this will take 3-5 mins).
+
+   ![Select Browse](../media/Fabric4.png)
+
+   And, this will take you to a webpage that will confirm **Data Simulation** has started:
+
+   ![Data Simulation](../media/datasimulation.png) 
+
+7. Return to the Azure Portal session by selecting the resource group from the top navigation bar.
+
+   ![Select Browse](../media/Fabric5.png)
+
+8. In the resources filter box for resources, search for **Synapse**.
+
+9. In the filtered results, select the **Azure Synapse Workspace** named **synapse<inject key="DeploymentID" enableCopy="false"/>**.
+
+   ![In the filtered results, select the Azure Synapse resource](../media/image1114.png) 
+
+   >**Note:** You might see a Synapse workspace resource name with a different suffix in your Azure Portal.
+
+10. In the Open Synapse Studio tile, select the **Open** link.
+
+    ![Open Synapse studio](../media/new-real-time-feb-6.png) 
+
+    >**Note:** Synapse Studio opens in a new web session (tab).
+
+11. Once the Synapse Studio opens, if you see **Failed to Load** pop up will be shown regarding the access, click on ok. Perform the steps 12 to 14 otherwise proceed with step 15.
+
+    ![](../media/03/midp-img-18.png)
+
+12. Now to resolve this, you need to add **Synapse Administrator** to the user, to do that select **Manage (1)** form the left menu, click on **Access control (2)** and select **+Add (3)**.
+
+    ![](../media/03/midp-img-9.png)
+
+13. Once you are in the **Add role assignment** pane, select scope to **Workspace (1)**, select **Synapse Administrator (2)** role from the dropdown, search for the user **ODL_User <inject key="DeploymentId"></inject> (3)** and click on **Apply (4)**.
+
+    ![](../media/03/midp-img-10.png)
+
+14. Once the role is applied successfully, make sure to logout and log back in, so that the assignment will be updated and continue with the further steps.
+
+15. In Synapse Studio, on the left pane, select the **Data** hub icon.
+
+16. In the **Data** pane, expand **Data Explorer Databases (Preview)**.
+
+17. Expand the **analyticspool<inject key="DeploymentId"></inject>** Data Explorer pool.
+
+18. Select the **ellipses** (the three dots next to the data explorer pool).
+
+    >**Note:** If you do not see the ellipses, expand the Data pane by dragging it to the right. 
+
+    ![Expand Data Explorer Pool](../media/img114.png) 
+
+19. Select **Open in Azure Data Explorer**.
+
+    *This will open Azure Data Explorer in a new web session (tab).*
+
+    ![Open Azure Data Explorer](../media/img115.png) 
+
+    *For this lab, an ADX pool has already been created in the Azure Synapse workspace.*
+
+    *By using ADX’s powerful Kusto Query Language (KQL), you can ensure that the thresholds you have set for each device in the store are being met.*
+
+    >**Note:** Other Azure services use KQL for analytical queries. These services include Azure Monitor logs, Application Insights, and Microsoft Defender for Endpoint.
+
+    >**Note:** Select **Dismiss** if any pop-up appears on your screen.
+
+    >**Note:** If a pop-up shows to trust the connection, please click on **Trust**. This will automatically create the connection.
+
+20. In Azure Data Explorer Studio, locate the **Home** section in the left pane, and click on **Get Data** button.
+
+    ![DataManagement](../media/new-real-time-feb-8.png)
+
+21. On the **Get Data** page, select the  **Event Hub** section, **Continuous** button.
+
+22. Select the **Add Connection** option.
+
+    ![DataManagement](../media/exercise1-addconection.png)
+
+    >**Note:** As you have clicked on trust in earlier steps, you will be able to see a connection already present here.
+
+23. On the **Add Connection** page, enter the Cluster URI and proceed by clicking on the **Add** button.
+
+    ![DataManagement](../media/exercise1-adduri.png)    
+     
+24. Click on the **+ New table** button for creating a new table, and name it as **Thermostat**. Upon opening the **Configure the data source** page, choose the default **subscription** from the dropdown list in the Subscription section. 
+
+25. In the **Event Hub namespace** dropdown list, select Event Hub that has a name starting with **adx-thermostat-occupancy-<inject key="DeploymentId"></inject>**.
+
+26. In the **Event Hubs** dropdown list, select **thermostat**.
+
+27. In the **Consumer group** dropdown list, select **$Default**.
+
+28. In the **Data connection name** dropdown list, select **thermostat_Default**.
+
+29. Click on **Next**.   
+
+    ![DataManagement](../media/exercise1-datasource.png)
+
+30. In the **Inspect the data** tab, wait until the data preview loads (about 20 seconds).
+
+31. Review the event data, which comprises thermostat measures from different devices.
+
+32. In the **Data** format dropdown list, select **JSON**.
+
+33. Click on **Finish**.  
+
+    ![DataManagement](../media/new-real-time-feb-11.png) 
+
+34. Confirm that the continuous ingestion from Event Hub has been established, and then click on **Close** (located at the bottom of the page).
+
+    ![DataManagement](../media/exercise1-summary.png) 
+
+35. Return to the Synapse Studio web session (tab).
+
+36. In Synapse Studio, at the left, select the **Develop** hub icon (the third from the top).
+
+37. In the **Develop** pane, expand **KQL scripts**.
+
+38. Select the **ThermostatOccupancyScript** script.
+
+    ![Select the ThermostatOccupancyScript Sript](../media/image1148.png) 
+
+39. In the **Connect to** dropdown list select the data explorer pool starting with **analyticspool-<inject key="DeploymentId"></inject>**.
+    >**Note:** If you do not see this option, click on the ellipsis [...] next to Publish on the top bar.
+
+    >**Note:** If required, collapse the panes on the left using the << icon at the top right of each pane.
+
+40. In the **Use database** dropdown list, select **AnalyticsDB**.
+
+41. Select the query (lines 4-8) that is commented as **What is the average temperature every 1 min?**
+
+    *The query retrieves the average temperature per minute for a thermostat device (TH005) for the Miami store.*
+
+42. Select **Run**. 
+
+43. In the **Results** pane (located along the bottom), review the query result expressed as a chart. Please note that it may take up to 2-3 minutes to accumulate data. If you do not see any result please re-run the query after some time. 
+
+    >**Note:** If you don't see data in the query result, wait for a few minutes and try again since the data will take a few minutes to start streaming. In case your query returns an error, chances are that the thermostat table was not created successfully in previous steps. You may have to create that table with a different name e.g. Thermostat1, update the KQL query accordingly and re-execute the KQL query.  
+
+    ![Review the query result ](../media/img_graph1.png) 
+
+    *Your graph may appear slightly different than the one shown above. It may take up to 60 seconds to load.*
+
+44. Notice that the temperature in the Miami store is oscillating between 65 and 70 degrees Fahrenheit. Based on these insights, we are able to adjust the temperatures to optimal levels.
+
+----
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="5fa14a02-4df1-4d4f-a1fc-f07f6ac7cc67" />
+
+## Task 1.2: Explore a few Synapse pipelines that ingest raw data from analytical data sources to the Bronze layer of the Data Lake. <a name="analytical-sources"></a>
+  
+In your next challenge, you will ingest historical data from various data sources.   
+
+In this task, you will ingest campaign data from Snowflake and customer churn data from Teradata into the data lake.
+
+1. Return to the Synapse Studio web session (tab).
+
+2. In Synapse Studio, at the left, select the **Integrate** hub icon (the fourth from the top).
+
+3. In the **Integrate** pane, expand **Pipelines**.
+
+4. Expand the **1 Enterprise Data Sources In The Lake** folder.
+
+5. Expand the **Landing Analytical Store Data** folder.
+
+6. Select the **Campaigns Data from Snowflake** pipeline.
+
+   >**Note:** If required, collapse the panes on the left using the << icon at the top right of each pane.
+
+   ![Campaigns data from Snowflake ](../media/image1206.png) 
+
+   *The ***Campaigns Data from Snowflake*** pipeline has two activities. The first one runs a lookup of data at the source Snowflake connection. The next activity brings that data into the Bronze layer in ADLS Gen2.*
+
+7. In the pipeline designer, select **Lookup** activity.
+
+8. In the pane below, select the **Settings** tab.
+
+9. In the **Source dataset** dropdown list, notice that **SnowflakeTable** is selected.
+
+   ![Source Dataset](../media/image1209.png) 
+
+10. In the pipeline designer, select the **Copy data** activity.
+
+11. In the pane below, select the **Sink** tab.
+
+12. In the **Sink dataset** dropdown list, notice that **SnowflakeCampaignsData** is selected.
+
+    ![Sink Dataset](../media/image1212.png) 
+
+    *Similarly, the next pipeline is designed to ingest customer churn data from Teradata, and Twitter data to the data lake.*
+
+    >**Note:** The image is for informational purposes only. Due to time constraints, we will not explore it in the lab.
+
+    ![CustomerChurn Data From Teradata](../media/image1213.png) 
+
+----
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="fd8dd027-db40-48c3-884a-4cce55e7da6c" />
+
+## Task 1.3: Explore a few Synapse pipelines that ingest raw data from operational data sources to the Bronze layer of the Data Lake. <a name="operational-sources"></a>
+  
+In this task, you will explore the design of a Synapse pipeline. This pipeline is designed to ingest raw data from various operational sources into the data lake.
+
+1. In the **Integrate** pane, expand the **Landing Operational Store Data** folder, and select the **Store Transactions Data from SQL DB** pipeline.
+
+   ![Landing Operational Store Data](../media/image1309.png) 
+
+    *The **Store Transactions Data from SQL DB** pipeline has two activities. The first one runs a lookup of data at the source Azure SQL Database connection. The next activity brings that data into the Bronze layer in ADLS Gen2*.
+
+   >**Note:** If required, collapse the panes on the left using the << icon at the top right of each pane.
+
+2. In the pipeline designer, select the Copy data activity.
+
+3. In the pane below, select the **Sink** tab.
+
+4. In the **Sink dataset** dropdown list, notice that **DestinationDataset** is selected.
+
+   ![Sink dataset](../media/image1312.png) 
+
+   *Similarly, the next pipeline is designed to ingest Sales data from Oracle to the data lake.*
+
+   >**Note:** The image is for informational purposes only. Due to time constraints, we will not explore it in the lab.
+
+   ![Sales Data](../media/image1302.png)
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="4c9cc6b0-7be6-4a51-a3fa-3c4e549f0008" />
+
+## Summary
+
+In this exercise, you have successfully ingested streaming near real-time and historical data into the data lake for Wide World importers.
+
+### You have successfully completed the lab. Click on **Next >>** to procced with next exercise.
