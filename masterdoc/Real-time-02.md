@@ -46,13 +46,6 @@ The data source for the pipeline is the Bronze layer in ADLS Gen2, which was loa
 
 ---
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - If you receive a success message, you can proceed to the next task.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="9d0c2bd3-b2f5-43d4-bd06-276aadb3ccb9" />
-
 ## Task 2.2: Review sentiment analysis model training. <a name="sentiment-model"></a>
 
 In this task, you will explore the sentiment analysis model training notebook. This notebook is used to retrieve the model ID that’s used by the DLT pipeline for further data processing.
